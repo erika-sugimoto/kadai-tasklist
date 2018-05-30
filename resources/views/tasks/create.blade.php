@@ -2,9 +2,14 @@
 
 @section('content')
 
+<!-- Write content for each page here -->
 <h1>New Tasklist Page</h1>
 
     {!! Form::model($task, ['route' => 'tasks.store']) !!}
+    
+        {!! Form::label('status', 'ステータス:') !!}
+        {!! Form::text('status') !!}
+
 
         {!! Form::label('content', 'task:') !!}
         {!! Form::text('content') !!}
@@ -13,4 +18,4 @@
 
     {!! Form::close() !!}
 
-@endsection
+@endsections
